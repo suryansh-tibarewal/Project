@@ -15,14 +15,15 @@ class TestingCache extends WordSpec {
     "cached" should {
       assert(testCache.checkIfCached(new CacheElement("string1", "string1")))
       assert(testCache.checkIfCached(new CacheElement("string2", "string1")))
-      println("All tests for cached keys pass")
+      println("All tests for keys that are cached pass")
     }
   }
   "not cached" should {
     assert(!testCache.checkIfCached(new CacheElement("string6", "string1")))
+    //string1 should have been removed
     assert(testCache.checkIfCached(new CacheElement("string6", "string1")))
     assert(!testCache.checkIfCached(new CacheElement("string3", "string1")))
     assert(testCache.checkIfCached(new CacheElement("string3", "string1")))
-    println("All tests for keys not cached pass")
+    println("All tests for keys that are not cached pass")
   }
 }
