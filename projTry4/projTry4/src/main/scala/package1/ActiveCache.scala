@@ -1,12 +1,11 @@
 package package1
 
 import java.util.Calendar
-
 import scala.collection.mutable
 
 class ActiveCache {
-  val size: Int = 5
-  var count: Int = 0
+  val size: Int = 5 //size of cache
+  var count: Int = 0 //no. of elements currently stored
   var full: Boolean = false
   var cache: mutable.Map[CacheElement, Long] = mutable.Map()
 
