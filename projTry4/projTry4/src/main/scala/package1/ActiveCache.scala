@@ -4,6 +4,7 @@ import java.util.Calendar
 import scala.collection.mutable
 
 class ActiveCache {
+  //declaration of variables
   val size: Int = 5 //size of cache
   var count: Int = 0 //no. of elements currently stored
   var full: Boolean = false
